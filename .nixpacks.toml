@@ -1,0 +1,12 @@
+[phases.setup]
+nixPkgs = [
+  "glib", "glibc", "gtk3", "nss", "nspr", "cups", "atk", "at-spi2-core", "expat", "dbus", "pango", "cairo", "alsa-lib", "libxkbcommon", "xorg.libX11", "xorg.libXcomposite", "xorg.libXdamage", "xorg.libXext", "xorg.libXfixes", "xorg.libXrandr", "mesa"
+]
+
+[phases.install]
+cmds = [
+  "playwright install chromium"
+]
+
+[start]
+cmd = "python app.py"
